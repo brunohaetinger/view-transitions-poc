@@ -9,4 +9,6 @@ if (document.startViewTransition) {
             });
         });
     });
+} else {
+    console.warn("View Transitions API is not supported in this browser.");
 }

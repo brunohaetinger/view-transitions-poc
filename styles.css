@@ -9,6 +9,14 @@ body {
     view-transition-name: title;
 }
 
+.image {
+    width: 300px;
+    height: auto;
+    margin: 20px;
+    border-radius: 10px;
+    view-transition-name: main-image;
+}
+
 .link {
     display: inline-block;
     margin-top: 20px;
@@ -17,7 +25,12 @@ body {
     color: blue;
 }
 
-::view-transition-group(title) {
-    animation-duration: 0.5s;
+/* Ensure the transition effect is visible */
+::view-transition-old(main-image),
+::view-transition-new(main-image),
+::view-transition-old(title),
+::view-transition-new(title) {
+    animation-duration: 0.6s;
     animation-timing-function: ease-in-out;
+    mix-blend-mode: normal;
 }
