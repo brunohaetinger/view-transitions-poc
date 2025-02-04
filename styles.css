@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+}
+
+.title {
+    font-size: 2rem;
+    view-transition-name: title;
+}
+
+.link {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: blue;
+}
+
+::view-transition-group(title) {
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+}
