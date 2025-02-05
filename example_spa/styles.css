@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+}
+
+.title {
+    font-size: 2rem;
+    view-transition-name: title;
+}
+
+.image {
+    width: 300px;
+    height: auto;
+    margin: 20px;
+    border-radius: 10px;
+    view-transition-name: main-image;
+}
+
+button {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+/* Explicitly control the animation */
+::view-transition-old(main-image),
+::view-transition-new(main-image),
+::view-transition-old(title),
+::view-transition-new(title) {
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    mix-blend-mode: normal;
+}
