@@ -25,6 +25,32 @@ button {
 }
 
 
+@keyframes slide-out-up {
+    to { transform: translateY(-60px); }
+}
+
+@keyframes slide-in-up {
+    from { transform: translateY(+60px); }
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+  }
+
+@keyframes fade-out {
+    to { opacity: 0; }
+}
+
+::view-transition-old(main-image) {
+    animation: 90ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+      300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-out-up;
+}
+
+::view-transition-new(main-image) {
+    animation: 90ms cubic-bezier(0.4, 0, 1, 1) both fade-in,
+      300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-in-up;
+}
+
 /* Explicitly control the animation */
 ::view-transition-old(main-image),
 ::view-transition-new(main-image),
