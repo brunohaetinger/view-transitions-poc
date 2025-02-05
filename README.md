@@ -18,7 +18,7 @@ This PoC (Proof of Concept) demonstrates View Transitions in a **Single Page App
 │   ├── index.html
 │   ├── script.js
 │   └── styles.css
-│── example1/
+│── example_cross/
 │   ├── index.html
 │   ├── page2.html
 │   ├── script.js
